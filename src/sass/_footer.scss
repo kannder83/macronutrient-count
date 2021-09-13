@@ -6,6 +6,10 @@
   align-items: center;
   background-color: $color-one;
   color: $color-four;
+  font-size: 16px;
+  @include font-stack;
+  font-weight: 400;
+  letter-spacing: 1.2px;
 }
 
 .footer a {
