@@ -2,9 +2,11 @@ import { Link } from "react-router-dom";
 
 const Links = () => {
   return (
-    <article className="links">
-      <Link to="/objetive">Siguiente</Link>
-    </article>
+    <p className="links">
+      <Link className="links_content" to="/objetive">
+        Siguiente
+      </Link>
+    </p>
   );
 };
 

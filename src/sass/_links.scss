@@ -1,0 +1,21 @@
+.links {
+  width: 74%;
+  height: 3rem;
+  border-radius: 0.6rem;
+  @include all-center;
+  background-color: $color-four-t60;
+}
+
+.links_content {
+  width: 100%;
+  height: 100%;
+  @include all-center;
+  text-decoration: none;
+  color: $color-one;
+  font-size: 1.1rem;
+  @include font-stack;
+}
+
+.links:hover {
+  background-color: $color-four-t80;
+}

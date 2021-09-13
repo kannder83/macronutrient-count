@@ -1,12 +1,10 @@
 .footer {
   width: 100%;
   min-height: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include all-center;
   background-color: $color-one;
   color: $color-four;
-  font-size: 16px;
+  font-size: 1.1rem;
   @include font-stack;
   font-weight: 400;
   letter-spacing: 1.2px;
