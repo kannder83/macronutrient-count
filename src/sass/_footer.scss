@@ -1,0 +1,13 @@
+.footer {
+  width: 100%;
+  min-height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-one;
+  color: $color-four;
+}
+
+.footer a {
+  color: $color-four;
+}
