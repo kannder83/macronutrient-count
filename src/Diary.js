@@ -1,7 +1,7 @@
 import Title from "./Title";
 import Links from "./Links";
 
-const Diary = ({ main_title, page, link_text }) => {
+const Diary = ({ main_title, page, link_text, dailyAmount }) => {
   return (
     <main className="main">
       <section className="container">
@@ -9,11 +9,11 @@ const Diary = ({ main_title, page, link_text }) => {
           <Title main_title={main_title} />
           <div className="box">
             <p>Proteina</p>
-            <p>30 gr</p>
+            <p>{dailyAmount().proteins}</p>
             <p>Grasas</p>
-            <p>30 gr</p>
-            <p>Calorias</p>
-            <p>30 gr</p>
+            <p>{dailyAmount().fats}</p>
+            <p>carbohidratos</p>
+            <p>{dailyAmount().carbohydrates}</p>
           </div>
           <Links page={page} link_text={link_text} />
         </article>

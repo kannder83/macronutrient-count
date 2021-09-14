@@ -1,35 +1,39 @@
 import Title from "./Title";
 import Links from "./Links";
 import Buttons from "./Buttons";
-import { useState } from "react";
+import { Link } from "react-router-dom";
 
-const Objective = ({ main_title, page, link_text }) => {
-  const [option, setOption] = useState();
-
+const Objective = ({ main_title, page, link_text, option, setOption }) => {
   return (
     <main className="main">
       <section className="container">
         <article className="wrapper">
           <Title main_title={main_title} />
           <div className="box">
-            <Buttons
-              button_text="Subir de peso"
-              option={option}
-              setOption={setOption}
-              bgColor="btn_t80"
-            />
-            <Buttons
-              button_text="Mantener el peso"
-              option={option}
-              setOption={setOption}
-              bgColor="btn_t60"
-            />
-            <Buttons
-              button_text="Bajar de peso"
-              option={option}
-              setOption={setOption}
-              bgColor="btn_t40"
-            />
+            <Link to="/diary" className="content_button">
+              <Buttons
+                button_text="Subir de peso"
+                option="gainWeight"
+                setOption={setOption}
+                bgColor="btn_t80"
+              />
+            </Link>
+            <Link to="/diary" className="content_button">
+              <Buttons
+                button_text="Mantener el peso"
+                option="maintainWeight"
+                setOption={setOption}
+                bgColor="btn_t60"
+              />
+            </Link>
+            <Link to="/diary" className="content_button">
+              <Buttons
+                button_text="Bajar de peso"
+                option="loseWeight"
+                setOption={setOption}
+                bgColor="btn_t40"
+              />
+            </Link>
           </div>
           <Links page={page} link_text={link_text} />
         </article>
