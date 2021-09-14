@@ -1,12 +1,16 @@
-import { Link } from "react-router-dom";
+import Links from "./Links";
+import Title from "./Title";
 
-const Missing = () => {
+const Missing = ({ page, link_text, main_title }) => {
   return (
     <main className="main">
-      <h3>Page Not Found.</h3>
-      <p>
-        <Link to="/">Home</Link>
-      </p>
+      <section className="container">
+        <article className="wrapper">
+          <Title main_title="404" />
+          <Title main_title={main_title} />
+          <Links page={page} link_text={link_text} />
+        </article>
+      </section>
     </main>
   );
 };

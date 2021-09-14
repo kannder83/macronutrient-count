@@ -1,10 +1,24 @@
-const Form = () => {
+const Form = ({ setCalories, calories, weight, setWeight }) => {
   return (
     <form className="form">
       <label htmlFor="weight">Peso (kg)</label>
-      <input id="weight" type="number" value="47" />
+      <input
+        id="weight"
+        required
+        type="number"
+        value={weight}
+        onChange={(e) => setWeight(e.target.value)}
+      />
       <label htmlFor="calories">Calorías de Mantenimiento (kcal)</label>
-      <input id="calories" type="number" value="1600" />
+      <input
+        id="calories"
+        required
+        type="number"
+        value={calories}
+        onChange={(e) => {
+          setCalories(e.target.value);
+        }}
+      />
     </form>
   );
 };

@@ -1,0 +1,28 @@
+.button {
+  width: 90%;
+  height: 3rem;
+  margin: 0.4rem 0;
+  border-radius: 0.8rem;
+  background-color: blue;
+  @include font-stack;
+  font-size: 1.1rem;
+  color: $color-one;
+  border: none;
+}
+
+.btn_t80 {
+  background-color: $color-three-t80;
+}
+
+.btn_t60 {
+  background-color: $color-three-t60;
+}
+
+.btn_t40 {
+  background-color: $color-three-t40;
+}
+
+.button:hover {
+  background-color: $color-two-t40;
+  cursor: pointer;
+}

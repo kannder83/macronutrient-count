@@ -1,7 +1,9 @@
 const Header = ({ title }) => {
   return (
     <header className="header">
-      <h2>{title}</h2>
+      <div className="container">
+        <h2 className="sub_title">{title}</h2>
+      </div>
     </header>
   );
 };
