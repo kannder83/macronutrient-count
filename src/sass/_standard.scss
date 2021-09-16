@@ -42,7 +42,19 @@
   color: $color-one;
 }
 
-.box {
+.box_item {
   width: 100%;
+  height: 100%;
+  //@include all-center;
+  // border: 1px solid red;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.8rem;
+}
+
+.box_objetive {
+  width: 100%;
+  height: 100%;
   @include all-center;
 }

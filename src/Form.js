@@ -15,9 +15,7 @@ const Form = ({ setCalories, calories, weight, setWeight }) => {
         required
         type="number"
         value={calories}
-        onChange={(e) => {
-          setCalories(e.target.value);
-        }}
+        onChange={(e) => setCalories(e.target.value)}
       />
     </form>
   );

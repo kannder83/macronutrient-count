@@ -1,0 +1,26 @@
+.item_box {
+  width: 100%;
+  min-height: 4rem;
+  @include all-center;
+  border-radius: 0.8rem;
+  @include font-stack;
+}
+
+.title_item {
+  color: $color_font-sec;
+  font-size: 0.8rem;
+  margin-bottom: 0.4rem;
+}
+
+.item_info {
+  font-size: 1.4rem;
+  margin-bottom: 0.2rem;
+}
+
+.bg_item_1 {
+  background-color: $color-three-t20;
+}
+
+.bg_item_2 {
+  background-color: $color-four-t20;
+}

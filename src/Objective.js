@@ -9,7 +9,7 @@ const Objective = ({ main_title, page, link_text, option, setOption }) => {
       <section className="container">
         <article className="wrapper">
           <Title main_title={main_title} />
-          <div className="box">
+          <div className="box_objetive">
             <Link to="/diary" className="content_button">
               <Buttons
                 button_text="Subir de peso"

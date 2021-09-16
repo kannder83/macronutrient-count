@@ -10,25 +10,25 @@ import { useState } from "react";
 
 function App() {
   const title = "Conteo de Macronutrientes";
-  const [weight, setWeight] = useState(60);
-  const [calories, setCalories] = useState(2000);
-  const [option, setOption] = useState("gainWeight");
+  const [weight, setWeight] = useState(50);
+  const [calories, setCalories] = useState(1600);
+  const [option, setOption] = useState("loseWeight");
 
   const dailyAmount = () => {
+    const kcal = calories;
     const calculatePortions = (relationProtein, relationFat, useOption) => {
       const protein = parseInt(weight * relationProtein);
       const kcalProtein = parseInt(protein * 4);
       const fat = parseInt(weight * relationFat);
       const kcalFat = parseInt(fat * 9);
-      const otherKcals =
-        useOption === "gainWeight"
-          ? 500
-          : useOption === "maintainWeight"
-          ? 0
-          : -500;
-      const kcalCarb = parseInt(calories + otherKcals - kcalProtein - kcalFat);
+      let otherKcals = 0;
+      if (useOption === "gainWeight") otherKcals = 500;
+      if (useOption === "maintainWeight") otherKcals = 0;
+      if (useOption === "loseWeight") otherKcals = -500;
+      const kcalCarb = parseInt(kcal + otherKcals - kcalProtein - kcalFat);
       const carbs = parseInt(kcalCarb / 4);
       const totalKcals = parseInt(kcalCarb + kcalFat + kcalProtein);
+      const totalGrams = parseInt(protein + fat + carbs);
 
       const userOption = {
         proteinskcal: kcalProtein,
@@ -38,7 +38,9 @@ function App() {
         fats: fat,
         carbohydrates: carbs,
         totalkcal: totalKcals,
+        totalgrams: totalGrams,
       };
+      console.log(userOption);
       return userOption;
     };
 
