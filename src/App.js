@@ -25,11 +25,11 @@ function App() {
             setWeight={setWeight}
             calories={calories}
             setCalories={setCalories}
-            page="/objetive"
+            page="/objective"
             link_text="Calcular"
           />
         </Route>
-        <Route path="/objetive">
+        <Route path="/objective">
           <Objective
             main_title="¿Cuál es tu objetivo?"
             page="/"
